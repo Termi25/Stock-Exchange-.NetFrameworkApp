@@ -1,5 +1,6 @@
 # Proiect_RMI_CasaSchimbValutar
 Aplicatie de schimb valutar utilizand fisierul XML de la BNR
+
 This is an application for locally exchanging currency on your device using the National Romanian Bank Xml public fiel. 
 The app currently does not update the exchange rates every day, but uses a local XML file from BNR.
 
