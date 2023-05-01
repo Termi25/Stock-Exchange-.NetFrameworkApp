@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCalculSchimbValutar = new System.Windows.Forms.Button();
-            this.btnPrintare = new System.Windows.Forms.Button();
+            this.btnSalvareTranzactie = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSchimbValutar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -79,6 +79,7 @@
             this.Cantiate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -262,20 +263,20 @@
             this.btnCalculSchimbValutar.UseVisualStyleBackColor = true;
             this.btnCalculSchimbValutar.Click += new System.EventHandler(this.btnCalculSchimbValutar_Click);
             // 
-            // btnPrintare
+            // btnSalvareTranzactie
             // 
-            this.btnPrintare.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov_inchis;
-            this.btnPrintare.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintare.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.btnPrintare.Image = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
-            this.btnPrintare.Location = new System.Drawing.Point(318, 626);
-            this.btnPrintare.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrintare.Name = "btnPrintare";
-            this.btnPrintare.Size = new System.Drawing.Size(219, 68);
-            this.btnPrintare.TabIndex = 15;
-            this.btnPrintare.Text = "Print";
-            this.btnPrintare.UseVisualStyleBackColor = true;
-            this.btnPrintare.Click += new System.EventHandler(this.btnPrintare_Click);
+            this.btnSalvareTranzactie.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov_inchis;
+            this.btnSalvareTranzactie.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvareTranzactie.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.btnSalvareTranzactie.Image = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
+            this.btnSalvareTranzactie.Location = new System.Drawing.Point(318, 626);
+            this.btnSalvareTranzactie.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalvareTranzactie.Name = "btnSalvareTranzactie";
+            this.btnSalvareTranzactie.Size = new System.Drawing.Size(219, 68);
+            this.btnSalvareTranzactie.TabIndex = 15;
+            this.btnSalvareTranzactie.Text = "Salvare Tranzactie";
+            this.btnSalvareTranzactie.UseVisualStyleBackColor = true;
+            this.btnSalvareTranzactie.Click += new System.EventHandler(this.btnPrintare_Click);
             // 
             // panel1
             // 
@@ -384,7 +385,7 @@
             this.tranzactiiTextToolStripMenuItem});
             this.loadToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // xMLCursValutarToolStripMenuItem
@@ -422,7 +423,7 @@
             this.sAVEASBINARYFILEToolStripMenuItem});
             this.sAVEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.sAVEToolStripMenuItem.Text = "SAVE";
             // 
             // quickSaveAsPDFToolStripMenuItem
@@ -447,7 +448,7 @@
             this.sAVEASToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.sAVEASToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEASToolStripMenuItem.Name = "sAVEASToolStripMenuItem";
-            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.sAVEASToolStripMenuItem.Text = "SAVE AS";
             this.sAVEASToolStripMenuItem.Click += new System.EventHandler(this.sAVEASToolStripMenuItem_Click);
             // 
@@ -529,6 +530,7 @@
             // lvTranzactii
             // 
             this.lvTranzactii.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lvTranzactii.CheckBoxes = true;
             this.lvTranzactii.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NumePrenume,
             this.Adresa,
@@ -596,19 +598,33 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 23;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.button1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
+            this.button1.Font = new System.Drawing.Font("Nipera", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.button1.Location = new System.Drawing.Point(1401, 752);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 70);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Printare";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
             this.ClientSize = new System.Drawing.Size(1924, 908);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tbAdresa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnPrintare);
+            this.Controls.Add(this.btnSalvareTranzactie);
             this.Controls.Add(this.btnCalculSchimbValutar);
             this.Controls.Add(this.tbMonedaDoritaFinal);
             this.Controls.Add(this.tbMonedaOferitaFinal);
@@ -659,7 +675,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCalculSchimbValutar;
-        private System.Windows.Forms.Button btnPrintare;
+        private System.Windows.Forms.Button btnSalvareTranzactie;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
@@ -695,6 +711,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1=new System.Windows.Forms.OpenFileDialog();
         private System.Windows.Forms.ToolStripMenuItem tranzactiiTextToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
