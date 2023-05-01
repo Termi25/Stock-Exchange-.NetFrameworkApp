@@ -126,7 +126,7 @@ namespace Proiect_RMI_CasaSchimbValutar
             }
             catch
             {
-                string mesaj = "Nu a fost selectata o valoarea pentru cantitatea oferita de moneda.";
+                MessageBox.Show("Nu a fost selectata o valoarea pentru cantitatea oferita de moneda.");
             }
         }
 

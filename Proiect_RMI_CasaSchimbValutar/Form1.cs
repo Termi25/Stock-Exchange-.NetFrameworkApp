@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Tulpep.NotificationWindow;
 //Casa de schimb valutar -  clase: Valute Tranzactii CursuriValutare
 namespace Proiect_RMI_CasaSchimbValutar
 {
@@ -32,7 +33,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             //int id = 0;
             //incarcare fisier XML default
             initializareXML();
-            MessageBox.Show("A fost incarcat cursul valutar default.");
+            //MessageBox.Show("A fost incarcat cursul valutar default.");
+            notificare("A fost incarcat cursul valutar default.");
             restaurareBinara();
 
             //incarcare comboBox
@@ -46,6 +48,19 @@ namespace Proiect_RMI_CasaSchimbValutar
         private void Form1_Close(object sender, EventArgs e)
         {
             salvareBinara();
+        }
+
+        private void notificare(string mesaj)
+        {
+            PopupNotifier popup=new PopupNotifier();
+            popup.TitleFont=new Font("Nipera",20);
+            popup.ContentFont = new Font("Nipera",12);
+            popup.BodyColor = Color.AntiqueWhite;
+            popup.TitleColor = Color.Black;
+            popup.TitleText = "Notificare";
+            popup.ContentText = mesaj;
+            popup.Image = Properties.Resources.logo_notificare.ToBitmap();
+            popup.Popup();
         }
 
         private void initializareXML()
@@ -82,10 +97,11 @@ namespace Proiect_RMI_CasaSchimbValutar
                 }
                 cv.setVector_CursValutar(vector_cursValutar, n);
                 cv.setVector_NumeValuta(vector_numeValuta, n);
+                notificare("A fost incarcat noul fisier XML necesar.");
             }
             catch
             {
-                MessageBox.Show("A esuat incarcarea fisierului XML. Va rog sa verificati fisierul.");
+                notificare("A esuat incarcarea fisierului XML. Va rog sa verificati fisierul.");
             }
         }
 
@@ -93,7 +109,7 @@ namespace Proiect_RMI_CasaSchimbValutar
         {
             if (cv.Cod == 0)
             {
-                MessageBox.Show("Nu ati incarcat un curs valutar.");
+                notificare("Nu ati incarcat un curs valutar.");
             }
             else
             {
@@ -106,7 +122,7 @@ namespace Proiect_RMI_CasaSchimbValutar
                 }
                 catch
                 {
-                    MessageBox.Show("Nu ati introdus corect numele si adresa.");
+                    notificare("Nu ati introdus corect numele si adresa.");
                 }
                 int poz1 = -1, poz2 = -1;
                 for (int i = 0; i < cv.Dimensiune; i++)
@@ -122,7 +138,7 @@ namespace Proiect_RMI_CasaSchimbValutar
                 }
                 if (poz1 == -1 || poz2 == -1)
                 {
-                    MessageBox.Show("Valorile alese nu se regasesc in fisierul incarcat.");
+                    notificare("Valorile alese nu se regasesc in fisierul incarcat.");
                 }
                 else
                 {
@@ -191,7 +207,7 @@ namespace Proiect_RMI_CasaSchimbValutar
             }
             catch
             {
-                MessageBox.Show("Nu exista salvari locale de tranzactii.");
+                notificare("Nu exista salvari locale de tranzactii.");
             }
         }
 
