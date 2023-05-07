@@ -21,9 +21,14 @@ namespace Proiect_RMI_CasaSchimbValutar
         private Tranzactie t = new Tranzactie();
         private List<Tranzactie> ListaTranzactii = new List<Tranzactie>();
         private CursValutar cv = new CursValutar();
+
+        Graphics gr;
+        Bitmap bmp;
         public Form1()
         {
             InitializeComponent();
+            bmp = new Bitmap(pnGraficCursValutar.Width, pnGraficCursValutar.Height);
+            gr=Graphics.FromImage(bmp);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,6 +53,101 @@ namespace Proiect_RMI_CasaSchimbValutar
         private void Form1_Close(object sender, EventArgs e)
         {
             salvareBinara();
+        }
+
+        private void desenareGrafic(String monedaDeRef,int pozMonedaDeRef)
+        {
+            //float[] cursValutarReferinta = new float[cv.Dimensiune];
+            //float valoareMonedaRef = 0.0f;
+            //for (int i = 0; i < cv.Dimensiune; i++)
+            //{
+            //    if (!(cv.Vector_NumeValuta[i].Denumire_scurta.Equals(monedaDeRef)))
+            //    {
+            //        cursValutarReferinta[i] = cv.Vector_CursValutar[i];
+            //    }
+            //    else
+            //    {
+            //        cursValutarReferinta[i] = cv.Vector_CursValutar[i];
+            //        valoareMonedaRef = cv.Vector_CursValutar[i];
+            //    }
+            //}
+            //for (int i = 0; i < cv.Dimensiune - 1; i++)
+            //{
+            //    cursValutarReferinta[i] = cursValutarReferinta[i] / valoareMonedaRef;
+            //}
+
+            //Brush br = new SolidBrush(Color.AntiqueWhite);
+            //Rectangle rec = new Rectangle(10, 10, pnGraficCursValutar.Width - 20, pnGraficCursValutar.Height - 20);
+            //gr.FillRectangle(br, rec);
+
+            ////desenareDreptunghiuri(cursValutarReferinta, monedaDeRef,gasit);
+
+            //pnGraficCursValutar.Invalidate();
+
+            if (pozMonedaDeRef >= 0)
+            {
+                float[] cursValutarReferinta = new float[cv.Dimensiune];
+                float valoareMonedaRef = 0.0f;
+                for (int i = 0; i < cv.Dimensiune; i++)
+                {
+                    if (!(cv.Vector_NumeValuta[i].Denumire_scurta.Equals(monedaDeRef)))
+                    {
+                        cursValutarReferinta[i] = cv.Vector_CursValutar[i];
+                    }
+                    else
+                    {
+                        cursValutarReferinta[i] = cv.Vector_CursValutar[i];
+                        valoareMonedaRef = cv.Vector_CursValutar[i];
+                    }
+                }
+                for (int i = 0; i < cv.Dimensiune - 1; i++)
+                {
+                    cursValutarReferinta[i] = cursValutarReferinta[i] / valoareMonedaRef;
+                }
+
+                Brush br = new SolidBrush(Color.AntiqueWhite);
+                Rectangle rec = new Rectangle(10, 10, pnGraficCursValutar.Width - 20, pnGraficCursValutar.Height - 20);
+                gr.FillRectangle(br, rec);
+
+                desenareDreptunghiuri(cursValutarReferinta, monedaDeRef,pozMonedaDeRef);
+
+                pnGraficCursValutar.Invalidate();
+            }
+        }
+
+        private void desenareDreptunghiuri(float[] cursValutarRef,string monedaDeRef,int pozMonedaDeRef)
+        {
+            int decalajX1 = 15;
+            int decalajX2=(pnGraficCursValutar.Width-25)/(cursValutarRef.Length*2+1)*2;
+            //decalajX1 = 15-decalajX2;
+            int decalajY1 = 15;
+            int decalajY2 = 0;//rezerva 40 de pixeli pentru text
+            float maxiValuta = cursValutarRef.Max();
+            Brush br = new SolidBrush(Color.Red);
+
+            //decalajY1 = (int)(15 + pnGraficCursValutar.Height * (cursValutarRef[0] / maxiValuta));
+            //decalajY2 = pnGraficCursValutar.Height - decalajY1 - 65;
+            //decalajX1 = decalajX1 + decalajX2*2;
+            //Rectangle rec = new Rectangle(decalajX1, decalajY1, decalajX2, decalajY2);
+            //gr.FillRectangle(br, rec);
+
+            for (int i = 0; i < cursValutarRef.Length; i++)
+            {
+                if (i != pozMonedaDeRef)
+                {
+                    decalajY1 = (int)(15 + pnGraficCursValutar.Height * (cursValutarRef[i] / maxiValuta)*100);
+                    decalajY2 = pnGraficCursValutar.Height - decalajY1 - 65;
+                    decalajX1 = decalajX1 + decalajX2;
+                    Rectangle rec = new Rectangle(decalajX1, decalajY1, decalajX2, decalajY2);
+                    gr.FillRectangle(br, rec);
+                    pnGraficCursValutar.Invalidate();
+                }
+                else
+                {
+                    decalajX1 = decalajX1 + decalajX2;
+                }
+            }
+            pnGraficCursValutar.Invalidate();
         }
 
         private void notificare(string mesaj)
@@ -105,11 +205,12 @@ namespace Proiect_RMI_CasaSchimbValutar
             }
         }
 
-        private void SchimbValutar_apel()
+        private int SchimbValutar_apel()
         {
             if (cv.Cod == 0)
             {
                 notificare("Nu ati incarcat un curs valutar.");
+                return -1;
             }
             else
             {
@@ -123,6 +224,7 @@ namespace Proiect_RMI_CasaSchimbValutar
                 catch
                 {
                     notificare("Nu ati introdus corect numele si adresa.");
+                    return -1;
                 }
                 int poz1 = -1, poz2 = -1;
                 for (int i = 0; i < cv.Dimensiune; i++)
@@ -139,6 +241,7 @@ namespace Proiect_RMI_CasaSchimbValutar
                 if (poz1 == -1 || poz2 == -1)
                 {
                     notificare("Valorile alese nu se regasesc in fisierul incarcat.");
+                    return poz1;
                 }
                 else
                 {
@@ -151,6 +254,7 @@ namespace Proiect_RMI_CasaSchimbValutar
                     de_transmis_cursValutar[0] = cv.Vector_CursValutar[poz1];
                     de_transmis_cursValutar[1] = cv.Vector_CursValutar[poz2];
                     t.CursValutarCurent = new CursValutar(cv.Cod, de_transmis_cursValutar, de_transmis, 2, cv.Data, cv.Nume);
+                    return poz1;
                 }
             }
         }
@@ -223,7 +327,7 @@ namespace Proiect_RMI_CasaSchimbValutar
 
         private void btnSchimbValutar_Click(object sender, EventArgs e)
         {
-            SchimbValutar_apel();
+            desenareGrafic(cbMonedaOferita.Text, SchimbValutar_apel());
         }
         private void btnCalculSchimbValutar_Click(object sender, EventArgs e)
         {
@@ -298,6 +402,11 @@ namespace Proiect_RMI_CasaSchimbValutar
                 //tbStudenti.Text = sr.ReadToEnd();
                 sr.Close();
             }
+        }
+
+        private void pnGraficCursValutar_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp,0,0);
         }
     }
 }

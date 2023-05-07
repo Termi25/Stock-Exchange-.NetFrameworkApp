@@ -48,7 +48,7 @@
             this.btnSalvareTranzactie = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSchimbValutar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnGraficCursValutar = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tbAdresa = new System.Windows.Forms.TextBox();
@@ -304,14 +304,15 @@
             this.btnSchimbValutar.UseVisualStyleBackColor = true;
             this.btnSchimbValutar.Click += new System.EventHandler(this.btnSchimbValutar_Click);
             // 
-            // panel2
+            // pnGraficCursValutar
             // 
-            this.panel2.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
-            this.panel2.Location = new System.Drawing.Point(803, 158);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 590);
-            this.panel2.TabIndex = 17;
+            this.pnGraficCursValutar.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
+            this.pnGraficCursValutar.Location = new System.Drawing.Point(803, 158);
+            this.pnGraficCursValutar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnGraficCursValutar.Name = "pnGraficCursValutar";
+            this.pnGraficCursValutar.Size = new System.Drawing.Size(590, 590);
+            this.pnGraficCursValutar.TabIndex = 17;
+            this.pnGraficCursValutar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnGraficCursValutar_Paint);
             // 
             // label8
             // 
@@ -623,7 +624,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tbAdresa);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnGraficCursValutar);
             this.Controls.Add(this.btnSalvareTranzactie);
             this.Controls.Add(this.btnCalculSchimbValutar);
             this.Controls.Add(this.tbMonedaDoritaFinal);
@@ -677,7 +678,7 @@
         private System.Windows.Forms.Button btnCalculSchimbValutar;
         private System.Windows.Forms.Button btnSalvareTranzactie;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnGraficCursValutar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbAdresa;
