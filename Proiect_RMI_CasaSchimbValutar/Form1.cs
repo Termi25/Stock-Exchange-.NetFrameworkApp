@@ -217,8 +217,8 @@ namespace Proiect_RMI_CasaSchimbValutar
                 }
                 else
                 {
-                    tbMonedaOferitaVal.Text = "1";
-                    tbMonedaDoritaVal.Text = Convert.ToString((float)(cv.Vector_CursValutar[poz2] / cv.Vector_CursValutar[poz1]));
+                    tbMonedaOferitaVal.Text = Convert.ToString((float)(cv.Vector_CursValutar[poz2] / cv.Vector_CursValutar[poz1]));
+                    tbMonedaDoritaVal.Text = "1";
                     Valuta[] de_transmis = new Valuta[2];
                     de_transmis[0] = new Valuta(cv.Vector_NumeValuta[poz1].Id, cv.Vector_NumeValuta[poz1].Denumire_scurta);
                     de_transmis[1] = new Valuta(cv.Vector_NumeValuta[poz2].Id, cv.Vector_NumeValuta[poz2].Denumire_scurta);
@@ -290,11 +290,6 @@ namespace Proiect_RMI_CasaSchimbValutar
         private void xMLCursValutarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             initializareXML();
-        }
-
-        private void evolutieCursValutarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSchimbValutar_Click(object sender, EventArgs e)

@@ -62,11 +62,6 @@
             this.quickSaveAsPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAVEASBINARYFILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAVEASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dRAWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evolutieCursValutarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.euroDolarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dolarPoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.euroPoundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
@@ -324,9 +319,9 @@
             this.label8.Location = new System.Drawing.Point(707, 138);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(580, 19);
+            this.label8.Size = new System.Drawing.Size(543, 19);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Evolutie Curs Valutar pentru cele doua monede";
+            this.label8.Text = "Valoare Curs Valutar fata de moneda oferita";
             // 
             // label9
             // 
@@ -357,7 +352,6 @@
             this.menuStrip1.Font = new System.Drawing.Font("Nipera", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fILEToolStripMenuItem,
-            this.dRAWToolStripMenuItem,
             this.hELPToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -454,58 +448,6 @@
             this.sAVEASToolStripMenuItem.Text = "SAVE AS";
             this.sAVEASToolStripMenuItem.Click += new System.EventHandler(this.sAVEASToolStripMenuItem_Click);
             // 
-            // dRAWToolStripMenuItem
-            // 
-            this.dRAWToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.dRAWToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
-            this.dRAWToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.evolutieCursValutarToolStripMenuItem});
-            this.dRAWToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.dRAWToolStripMenuItem.Name = "dRAWToolStripMenuItem";
-            this.dRAWToolStripMenuItem.Size = new System.Drawing.Size(55, 18);
-            this.dRAWToolStripMenuItem.Text = "DRAW";
-            // 
-            // evolutieCursValutarToolStripMenuItem
-            // 
-            this.evolutieCursValutarToolStripMenuItem.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.evolutieCursValutarToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
-            this.evolutieCursValutarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.euroDolarToolStripMenuItem,
-            this.dolarPoundToolStripMenuItem,
-            this.euroPoundToolStripMenuItem});
-            this.evolutieCursValutarToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.evolutieCursValutarToolStripMenuItem.Name = "evolutieCursValutarToolStripMenuItem";
-            this.evolutieCursValutarToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
-            this.evolutieCursValutarToolStripMenuItem.Text = "Evolutie Curs Valutar";
-            this.evolutieCursValutarToolStripMenuItem.Click += new System.EventHandler(this.evolutieCursValutarToolStripMenuItem_Click);
-            // 
-            // euroDolarToolStripMenuItem
-            // 
-            this.euroDolarToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("euroDolarToolStripMenuItem.BackgroundImage")));
-            this.euroDolarToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.euroDolarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("euroDolarToolStripMenuItem.Image")));
-            this.euroDolarToolStripMenuItem.Name = "euroDolarToolStripMenuItem";
-            this.euroDolarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.euroDolarToolStripMenuItem.Text = "Euro - Dolar";
-            // 
-            // dolarPoundToolStripMenuItem
-            // 
-            this.dolarPoundToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dolarPoundToolStripMenuItem.BackgroundImage")));
-            this.dolarPoundToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.dolarPoundToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dolarPoundToolStripMenuItem.Image")));
-            this.dolarPoundToolStripMenuItem.Name = "dolarPoundToolStripMenuItem";
-            this.dolarPoundToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.dolarPoundToolStripMenuItem.Text = "Dolar - Pound";
-            // 
-            // euroPoundToolStripMenuItem
-            // 
-            this.euroPoundToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("euroPoundToolStripMenuItem.BackgroundImage")));
-            this.euroPoundToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.euroPoundToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("euroPoundToolStripMenuItem.Image")));
-            this.euroPoundToolStripMenuItem.Name = "euroPoundToolStripMenuItem";
-            this.euroPoundToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.euroPoundToolStripMenuItem.Text = "Euro - Pound";
-            // 
             // hELPToolStripMenuItem
             // 
             this.hELPToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
@@ -544,6 +486,7 @@
             this.lvTranzactii.Location = new System.Drawing.Point(3, 3);
             this.lvTranzactii.Name = "lvTranzactii";
             this.lvTranzactii.Size = new System.Drawing.Size(504, 584);
+            this.lvTranzactii.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.lvTranzactii.TabIndex = 0;
             this.lvTranzactii.UseCompatibleStateImageBehavior = false;
             this.lvTranzactii.View = System.Windows.Forms.View.Details;
@@ -700,11 +643,6 @@
         private System.Windows.Forms.ToolStripMenuItem xMLCursValutarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tranzactieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dRAWToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem evolutieCursValutarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem euroDolarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dolarPoundToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem euroPoundToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quickSaveAsPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEASBINARYFILEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEASToolStripMenuItem;
