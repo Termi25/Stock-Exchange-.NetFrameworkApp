@@ -79,7 +79,8 @@
             this.Cantiate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrintare = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -298,7 +299,7 @@
             this.btnSchimbValutar.Location = new System.Drawing.Point(558, 10);
             this.btnSchimbValutar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSchimbValutar.Name = "btnSchimbValutar";
-            this.btnSchimbValutar.Size = new System.Drawing.Size(249, 70);
+            this.btnSchimbValutar.Size = new System.Drawing.Size(157, 70);
             this.btnSchimbValutar.TabIndex = 22;
             this.btnSchimbValutar.Text = "Curs Valutar";
             this.btnSchimbValutar.UseVisualStyleBackColor = true;
@@ -307,10 +308,10 @@
             // pnGraficCursValutar
             // 
             this.pnGraficCursValutar.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
-            this.pnGraficCursValutar.Location = new System.Drawing.Point(803, 158);
+            this.pnGraficCursValutar.Location = new System.Drawing.Point(711, 158);
             this.pnGraficCursValutar.Margin = new System.Windows.Forms.Padding(4);
             this.pnGraficCursValutar.Name = "pnGraficCursValutar";
-            this.pnGraficCursValutar.Size = new System.Drawing.Size(590, 590);
+            this.pnGraficCursValutar.Size = new System.Drawing.Size(682, 590);
             this.pnGraficCursValutar.TabIndex = 17;
             this.pnGraficCursValutar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnGraficCursValutar_Paint);
             // 
@@ -320,7 +321,7 @@
             this.label8.Font = new System.Drawing.Font("Nipera", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.label8.Image = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
-            this.label8.Location = new System.Drawing.Point(799, 135);
+            this.label8.Location = new System.Drawing.Point(707, 138);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(580, 19);
@@ -599,18 +600,29 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 23;
             // 
-            // button1
+            // btnPrintare
             // 
-            this.button1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.button1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
-            this.button1.Font = new System.Drawing.Font("Nipera", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.button1.Location = new System.Drawing.Point(1401, 752);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 70);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Printare";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPrintare.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnPrintare.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.mov;
+            this.btnPrintare.Font = new System.Drawing.Font("Nipera", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintare.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.btnPrintare.Location = new System.Drawing.Point(1401, 752);
+            this.btnPrintare.Name = "btnPrintare";
+            this.btnPrintare.Size = new System.Drawing.Size(178, 70);
+            this.btnPrintare.TabIndex = 24;
+            this.btnPrintare.Text = "Printare";
+            this.btnPrintare.UseVisualStyleBackColor = false;
+            this.btnPrintare.Click += new System.EventHandler(this.btnPrintare_Click_1);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Form1
             // 
@@ -618,7 +630,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
             this.ClientSize = new System.Drawing.Size(1924, 908);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPrintare);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
@@ -712,7 +724,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1=new System.Windows.Forms.OpenFileDialog();
         private System.Windows.Forms.ToolStripMenuItem tranzactiiTextToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrintare;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
 
