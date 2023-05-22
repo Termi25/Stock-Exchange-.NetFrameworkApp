@@ -379,5 +379,11 @@ namespace Proiect_RMI_CasaSchimbValutar
             //dlg.Document = pd;
             //dlg.ShowDialog();
         }
+
+        private void hELPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
 }

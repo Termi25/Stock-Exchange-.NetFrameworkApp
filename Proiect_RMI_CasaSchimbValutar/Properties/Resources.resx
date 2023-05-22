@@ -118,22 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="albastru_inchis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albastru_inchis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_notificare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_notificare.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mov" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mov.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="galben" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\galben.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="albastru_inchis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\albastru_inchis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="albastru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\albastru.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="galben" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\galben.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tutorial_CursValutar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_CursValutar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tutorial_CursValutar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_CursValutar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tutorial_CursValutar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_CursValutar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mov_inchis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mov_inchis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_notificare" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_notificare.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tutorial_CursValutar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_CursValutar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButonX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButonX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

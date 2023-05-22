@@ -83,6 +83,16 @@ namespace Proiect_RMI_CasaSchimbValutar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButonX {
+            get {
+                object obj = ResourceManager.GetObject("ButonX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap galben {
             get {
                 object obj = ResourceManager.GetObject("galben", resourceCulture);
@@ -116,6 +126,46 @@ namespace Proiect_RMI_CasaSchimbValutar.Properties {
         internal static System.Drawing.Bitmap mov_inchis {
             get {
                 object obj = ResourceManager.GetObject("mov_inchis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial_CursValutar1 {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial_CursValutar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial_CursValutar2 {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial_CursValutar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial_CursValutar3 {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial_CursValutar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial_CursValutar4 {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial_CursValutar4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

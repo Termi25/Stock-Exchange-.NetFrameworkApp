@@ -356,7 +356,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1924, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 25);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "Menu Line";
             // 
@@ -369,7 +369,7 @@
             this.sAVEASToolStripMenuItem});
             this.fILEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.fILEToolStripMenuItem.Name = "fILEToolStripMenuItem";
-            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(45, 18);
+            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(45, 19);
             this.fILEToolStripMenuItem.Text = "FILE";
             // 
             // loadToolStripMenuItem
@@ -453,8 +453,9 @@
             this.hELPToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.hELPToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
-            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(52, 18);
+            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(52, 19);
             this.hELPToolStripMenuItem.Text = "HELP";
+            this.hELPToolStripMenuItem.Click += new System.EventHandler(this.hELPToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
