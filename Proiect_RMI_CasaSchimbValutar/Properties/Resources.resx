@@ -136,6 +136,9 @@
   <data name="Tutorial_CursValutar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tutorial_CursValutar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ButonX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButonX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Tutorial_CursValutar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tutorial_CursValutar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,7 +151,7 @@
   <data name="Tutorial_CursValutar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tutorial_CursValutar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ButonX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ButonX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoCasaSchimbValutar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoCasaSchimbValutar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

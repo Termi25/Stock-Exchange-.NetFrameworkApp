@@ -381,7 +381,7 @@
             this.tranzactiiTextToolStripMenuItem});
             this.loadToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // xMLCursValutarToolStripMenuItem
@@ -399,7 +399,7 @@
             this.tranzactieToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.tranzactieToolStripMenuItem.Name = "tranzactieToolStripMenuItem";
             this.tranzactieToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.tranzactieToolStripMenuItem.Text = "Tranzactii Locale";
+            this.tranzactieToolStripMenuItem.Text = "Tranzactii Binare";
             this.tranzactieToolStripMenuItem.Click += new System.EventHandler(this.tranzactieToolStripMenuItem_Click);
             // 
             // tranzactiiTextToolStripMenuItem
@@ -419,7 +419,7 @@
             this.sAVEASBINARYFILEToolStripMenuItem});
             this.sAVEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sAVEToolStripMenuItem.Text = "SAVE";
             // 
             // quickSaveAsPDFToolStripMenuItem
@@ -429,6 +429,7 @@
             this.quickSaveAsPDFToolStripMenuItem.Name = "quickSaveAsPDFToolStripMenuItem";
             this.quickSaveAsPDFToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.quickSaveAsPDFToolStripMenuItem.Text = "Quick Save as PDF";
+            this.quickSaveAsPDFToolStripMenuItem.Click += new System.EventHandler(this.quickSaveAsPDFToolStripMenuItem_Click);
             // 
             // sAVEASBINARYFILEToolStripMenuItem
             // 
@@ -444,7 +445,7 @@
             this.sAVEASToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.sAVEASToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEASToolStripMenuItem.Name = "sAVEASToolStripMenuItem";
-            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sAVEASToolStripMenuItem.Text = "SAVE AS";
             this.sAVEASToolStripMenuItem.Click += new System.EventHandler(this.sAVEASToolStripMenuItem_Click);
             // 

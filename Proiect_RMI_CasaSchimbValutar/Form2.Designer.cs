@@ -75,7 +75,7 @@
             // tutorial1
             // 
             this.tutorial1.Image = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.Tutorial_CursValutar1;
-            this.tutorial1.Location = new System.Drawing.Point(0, 11);
+            this.tutorial1.Location = new System.Drawing.Point(0, -2);
             this.tutorial1.Name = "tutorial1";
             this.tutorial1.Size = new System.Drawing.Size(1920, 1038);
             this.tutorial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

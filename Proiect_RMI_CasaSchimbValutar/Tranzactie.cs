@@ -13,7 +13,7 @@ namespace Proiect_RMI_CasaSchimbValutar
         float CalculeazaRaportSchimb(float[] listaCantitate,int nr);
     }
     [Serializable]
-    internal class Tranzactie: IRaport,IGenerareId
+    public class Tranzactie: IRaport,IGenerareId
     {
         private int cod_tranzactie;// prima moneda este ce se vinde in schimbul celei de-a doua
         private float[] listaSchimbCantitate;
@@ -41,6 +41,19 @@ namespace Proiect_RMI_CasaSchimbValutar
             this.cursValutarCurent=new CursValutar(cursValutarCurent);
             this.nume = nume;
             this.adresa= adresa;
+        }
+
+        public Tranzactie(Tranzactie de_copiat)
+        {
+            this.cod_tranzactie = de_copiat.cod_tranzactie;
+            listaSchimbCantitate = new float[2];
+            for (int i = 0; i < 2; i++)
+            {
+                this.listaSchimbCantitate[i] = de_copiat.listaSchimbCantitate[i];
+            }
+            this.cursValutarCurent = new CursValutar(de_copiat.cursValutarCurent);
+            this.nume = de_copiat.nume;
+            this.adresa = de_copiat.adresa;
         }
 
         public void setCantitatePrimaMoneda(float q)

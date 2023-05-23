@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Proiect_RMI_CasaSchimbValutar
 {
     [Serializable]
-    internal class CursValutar : ICloneable, IComparable, IGenerareId
+    public class CursValutar : ICloneable, IComparable, IGenerareId
     {
         private int cod;
         private float[] vector_cursValutar;

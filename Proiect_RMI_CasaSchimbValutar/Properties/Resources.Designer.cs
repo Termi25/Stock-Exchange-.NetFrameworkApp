@@ -113,6 +113,16 @@ namespace Proiect_RMI_CasaSchimbValutar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoCasaSchimbValutar {
+            get {
+                object obj = ResourceManager.GetObject("LogoCasaSchimbValutar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mov {
             get {
                 object obj = ResourceManager.GetObject("mov", resourceCulture);

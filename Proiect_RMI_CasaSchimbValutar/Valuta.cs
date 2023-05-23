@@ -12,7 +12,7 @@ namespace Proiect_RMI_CasaSchimbValutar
         int creareId();
     }
     [Serializable]
-    internal class Valuta:ICloneable,IComparable,IGenerareId
+    public class Valuta:ICloneable,IComparable,IGenerareId
     {
         private int id;
         private string denumire_scurta;

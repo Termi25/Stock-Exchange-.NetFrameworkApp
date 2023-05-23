@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using Tulpep.NotificationWindow;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //Casa de schimb valutar -  clase: Valute Tranzactii CursuriValutare
 namespace Proiect_RMI_CasaSchimbValutar
 {
@@ -307,7 +308,7 @@ namespace Proiect_RMI_CasaSchimbValutar
             }
             catch
             {
-                MessageBox.Show("Nu a fost oferita o suma pentru schimb.");
+                notificare("Nu a fost oferita o suma pentru schimb.");
             }
         }
 
@@ -384,6 +385,24 @@ namespace Proiect_RMI_CasaSchimbValutar
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void quickSaveAsPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ListView.CheckedListViewItemCollection checkedItems =
+            lvTranzactii.CheckedItems;
+
+            int nr_elemente_Selectate = checkedItems.Count;
+            if(nr_elemente_Selectate == 1)
+            {
+                System.Windows.Forms.ListView.CheckedIndexCollection checkedIndeces = lvTranzactii.CheckedIndices;
+                Form3 form3 = new Form3(ListaTranzactii[checkedIndeces[0]],cv);
+                form3.Show();
+            }
+            else
+            {
+                notificare("Trebuie selectata numai o tranzactie pentru printare drept PDF.");
+            }
         }
     }
 }
