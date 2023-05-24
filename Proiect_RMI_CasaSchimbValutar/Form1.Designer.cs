@@ -71,7 +71,7 @@
             this.Oferta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantitate1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cererea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cantiate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Cantitate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnPrintare = new System.Windows.Forms.Button();
@@ -356,7 +356,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1924, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 24);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "Menu Line";
             // 
@@ -369,7 +369,7 @@
             this.sAVEASToolStripMenuItem});
             this.fILEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.fILEToolStripMenuItem.Name = "fILEToolStripMenuItem";
-            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(45, 19);
+            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(45, 18);
             this.fILEToolStripMenuItem.Text = "FILE";
             // 
             // loadToolStripMenuItem
@@ -381,7 +381,7 @@
             this.tranzactiiTextToolStripMenuItem});
             this.loadToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // xMLCursValutarToolStripMenuItem
@@ -419,7 +419,7 @@
             this.sAVEASBINARYFILEToolStripMenuItem});
             this.sAVEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.sAVEToolStripMenuItem.Text = "SAVE";
             // 
             // quickSaveAsPDFToolStripMenuItem
@@ -445,7 +445,7 @@
             this.sAVEASToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.sAVEASToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEASToolStripMenuItem.Name = "sAVEASToolStripMenuItem";
-            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.sAVEASToolStripMenuItem.Text = "SAVE AS";
             this.sAVEASToolStripMenuItem.Click += new System.EventHandler(this.sAVEASToolStripMenuItem_Click);
             // 
@@ -454,7 +454,7 @@
             this.hELPToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.hELPToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
-            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(52, 19);
+            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(52, 18);
             this.hELPToolStripMenuItem.Text = "HELP";
             this.hELPToolStripMenuItem.Click += new System.EventHandler(this.hELPToolStripMenuItem_Click);
             // 
@@ -483,7 +483,7 @@
             this.Oferta,
             this.Cantitate1,
             this.Cererea,
-            this.Cantiate2});
+            this.Cantitate2});
             this.lvTranzactii.HideSelection = false;
             this.lvTranzactii.Location = new System.Drawing.Point(3, 3);
             this.lvTranzactii.Name = "lvTranzactii";
@@ -518,10 +518,10 @@
             this.Cererea.Text = "Cererea";
             this.Cererea.Width = 72;
             // 
-            // Cantiate2
+            // Cantitate2
             // 
-            this.Cantiate2.Text = "Cantitate";
-            this.Cantiate2.Width = 86;
+            this.Cantitate2.Text = "Cantitate";
+            this.Cantitate2.Width = 86;
             // 
             // label10
             // 
@@ -658,7 +658,7 @@
         private System.Windows.Forms.ColumnHeader Oferta;
         private System.Windows.Forms.ColumnHeader Cantitate1;
         private System.Windows.Forms.ColumnHeader Cererea;
-        private System.Windows.Forms.ColumnHeader Cantiate2;
+        private System.Windows.Forms.ColumnHeader Cantitate2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1=new System.Windows.Forms.SaveFileDialog();
         private System.Windows.Forms.OpenFileDialog openFileDialog1=new System.Windows.Forms.OpenFileDialog();

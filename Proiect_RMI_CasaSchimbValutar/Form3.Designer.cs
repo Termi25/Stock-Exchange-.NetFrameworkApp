@@ -51,6 +51,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelSalvare.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbNumePrenume
@@ -59,7 +60,7 @@
             this.tbNumePrenume.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumePrenume.Font = new System.Drawing.Font("Nipera", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumePrenume.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbNumePrenume.Location = new System.Drawing.Point(12, 68);
+            this.tbNumePrenume.Location = new System.Drawing.Point(12, 60);
             this.tbNumePrenume.Name = "tbNumePrenume";
             this.tbNumePrenume.ReadOnly = true;
             this.tbNumePrenume.Size = new System.Drawing.Size(406, 23);
@@ -71,7 +72,7 @@
             this.tbAdresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAdresa.Font = new System.Drawing.Font("Nipera", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAdresa.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbAdresa.Location = new System.Drawing.Point(12, 148);
+            this.tbAdresa.Location = new System.Drawing.Point(12, 140);
             this.tbAdresa.Name = "tbAdresa";
             this.tbAdresa.ReadOnly = true;
             this.tbAdresa.Size = new System.Drawing.Size(406, 23);
@@ -83,7 +84,7 @@
             this.tbCantitateaOferita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCantitateaOferita.Font = new System.Drawing.Font("Nipera", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCantitateaOferita.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbCantitateaOferita.Location = new System.Drawing.Point(15, 332);
+            this.tbCantitateaOferita.Location = new System.Drawing.Point(3, 138);
             this.tbCantitateaOferita.Name = "tbCantitateaOferita";
             this.tbCantitateaOferita.ReadOnly = true;
             this.tbCantitateaOferita.Size = new System.Drawing.Size(175, 23);
@@ -95,7 +96,7 @@
             this.tbCantitateaDorita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCantitateaDorita.Font = new System.Drawing.Font("Nipera", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCantitateaDorita.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbCantitateaDorita.Location = new System.Drawing.Point(240, 332);
+            this.tbCantitateaDorita.Location = new System.Drawing.Point(228, 138);
             this.tbCantitateaDorita.Name = "tbCantitateaDorita";
             this.tbCantitateaDorita.ReadOnly = true;
             this.tbCantitateaDorita.Size = new System.Drawing.Size(175, 23);
@@ -104,7 +105,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.LogoCasaSchimbValutar;
-            this.pictureBox1.Location = new System.Drawing.Point(433, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(433, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(351, 324);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +118,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 49);
+            this.label1.Location = new System.Drawing.Point(12, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 16);
             this.label1.TabIndex = 10;
@@ -129,7 +130,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 129);
+            this.label2.Location = new System.Drawing.Point(12, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 11;
@@ -221,16 +222,18 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.galben;
+            this.panel1.Controls.Add(this.tbCantitateaOferita);
             this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.tbCantitateaDorita);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tbMonedaOferitaTxt);
             this.panel1.Controls.Add(this.tbMonedaDoritaTxt);
             this.panel1.Controls.Add(this.tbMonedaDoritaValoare);
             this.panel1.Controls.Add(this.tbMonedaOferitaValoare);
-            this.panel1.Location = new System.Drawing.Point(12, 194);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(12, 186);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(406, 179);
             this.panel1.TabIndex = 8;
@@ -275,6 +278,12 @@
             // panelSalvare
             // 
             this.panelSalvare.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
+            this.panelSalvare.Controls.Add(this.pictureBox1);
+            this.panelSalvare.Controls.Add(this.label2);
+            this.panelSalvare.Controls.Add(this.tbNumePrenume);
+            this.panelSalvare.Controls.Add(this.label1);
+            this.panelSalvare.Controls.Add(this.tbAdresa);
+            this.panelSalvare.Controls.Add(this.panel1);
             this.panelSalvare.Location = new System.Drawing.Point(0, 0);
             this.panelSalvare.Name = "panelSalvare";
             this.panelSalvare.Size = new System.Drawing.Size(811, 381);
@@ -301,14 +310,6 @@
             this.ClientSize = new System.Drawing.Size(811, 414);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSalvare);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tbCantitateaDorita);
-            this.Controls.Add(this.tbCantitateaOferita);
-            this.Controls.Add(this.tbAdresa);
-            this.Controls.Add(this.tbNumePrenume);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSalvare);
             this.Font = new System.Drawing.Font("Nipera", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -319,8 +320,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelSalvare.ResumeLayout(false);
+            this.panelSalvare.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

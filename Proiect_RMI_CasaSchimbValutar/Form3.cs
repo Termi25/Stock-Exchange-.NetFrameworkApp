@@ -73,14 +73,15 @@ namespace Proiect_RMI_CasaSchimbValutar
         private void btnSalvare_Click(object sender, EventArgs e)
         {
             string denumire = t.Nume+'_'+t.Cod_tranzactie;
-            Graphics g=panelSalvare.CreateGraphics();
+            panelSalvare.CreateGraphics();
             Bitmap bitmap = new Bitmap(panelSalvare.Width, panelSalvare.Height);
-            g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            //g.CopyFromScreen(0, 0, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
+            panelSalvare.DrawToBitmap(bitmap,new Rectangle(0,0,bitmap.Width,bitmap.Height));
             var doc = new Document();
             var builder = new DocumentBuilder(doc);
 
             builder.InsertImage(bitmap);
-            bitmap.Save(denumire + ".pdf");
+            //bitmap.Save(denumire + ".pdf");
             doc.Save(denumire+".pdf");
             MessageBox.Show("Tranzactie salvata drept PDF");
             this.Close();

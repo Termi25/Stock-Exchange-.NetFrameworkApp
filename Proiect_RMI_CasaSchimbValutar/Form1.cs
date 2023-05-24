@@ -238,14 +238,14 @@ namespace Proiect_RMI_CasaSchimbValutar
             {
                 itm.Remove();
             }
-            foreach(Tranzactie tran in ListaTranzactii)
+            for(int i=0 ; i< ListaTranzactii.Count; i++)
             {
-                ListViewItem item = new ListViewItem(tran.Nume);
-                item.SubItems.Add(tran.Adresa);
-                item.SubItems.Add(tran.ToString().Split(',')[0]);
-                item.SubItems.Add(tran.ListaSchimbCantitate[0].ToString());
-                item.SubItems.Add(tran.ToString().Split(',')[1]);
-                item.SubItems.Add(tran.ListaSchimbCantitate[1].ToString());
+                ListViewItem item = new ListViewItem(ListaTranzactii[i].Nume);
+                item.SubItems.Add(ListaTranzactii[i].Adresa);
+                item.SubItems.Add(ListaTranzactii[i].ToString().Split(',')[0]);
+                item.SubItems.Add(ListaTranzactii[i].ListaSchimbCantitate[0].ToString());
+                item.SubItems.Add(ListaTranzactii[i].ToString().Split(',')[1]);
+                item.SubItems.Add(ListaTranzactii[i].ListaSchimbCantitate[1].ToString());
                 lvTranzactii.Items.Add(item);
             }
         }
@@ -395,8 +395,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             int nr_elemente_Selectate = checkedItems.Count;
             if(nr_elemente_Selectate == 1)
             {
-                System.Windows.Forms.ListView.CheckedIndexCollection checkedIndeces = lvTranzactii.CheckedIndices;
-                Form3 form3 = new Form3(ListaTranzactii[checkedIndeces[0]],cv);
+                int poz = ListaTranzactii.Count-1-lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
+                Form3 form3 = new Form3(ListaTranzactii[poz],cv);
                 form3.Show();
             }
             else
