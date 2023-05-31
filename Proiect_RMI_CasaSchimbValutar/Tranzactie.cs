@@ -13,7 +13,7 @@ namespace Proiect_RMI_CasaSchimbValutar
         float CalculeazaRaportSchimb(float[] listaCantitate,int nr);
     }
     [Serializable]
-    public class Tranzactie: IRaport,IGenerareId
+    public class Tranzactie: IRaport,IGenerareId, IDataObject
     {
         private int cod_tranzactie;// prima moneda este ce se vinde in schimbul celei de-a doua
         private float[] listaSchimbCantitate;
@@ -165,6 +165,66 @@ namespace Proiect_RMI_CasaSchimbValutar
             Random rnd = new Random();
             int n = rnd.Next();
             return n;
+        }
+
+        public object GetData(string format, bool autoConvert)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object GetData(string format)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object GetData(Type format)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetData(string format, bool autoConvert, object data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetData(string format, object data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetData(Type format, object data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetData(object data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetDataPresent(string format, bool autoConvert)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetDataPresent(string format)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool GetDataPresent(Type format)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string[] GetFormats(bool autoConvert)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string[] GetFormats()
+        {
+            throw new NotImplementedException();
         }
     }
 }

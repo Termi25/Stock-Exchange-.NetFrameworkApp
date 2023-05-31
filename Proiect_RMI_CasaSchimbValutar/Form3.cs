@@ -20,16 +20,18 @@ namespace Proiect_RMI_CasaSchimbValutar
     {
         private Tranzactie t ;
         private CursValutar cv ;
+        private string data;
         public Form3()
         {
             InitializeComponent();
         }
 
-        public Form3(Tranzactie t, CursValutar cv)
+        public Form3(Tranzactie t, CursValutar cv, String data)
         {
             InitializeComponent();
             this.t = new Tranzactie(t);
             this.cv = new CursValutar(cv);
+            this.data = data;
             initializareTextBox();
             populareTextBox();
         }
@@ -46,6 +48,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             tbMonedaDoritaValoare.BackColor = Color.FromArgb(255, 200, 87);
             tbCantitateaOferita.BackColor = Color.FromArgb(255, 200,87);
             tbCantitateaDorita.BackColor = Color.FromArgb(255, 200, 87);
+            tbData.BackColor = Color.FromArgb(17, 157, 164);
+            tbData.ForeColor = Color.FromArgb(255, 200, 87);
         }
 
         private void populareTextBox()
@@ -58,6 +62,7 @@ namespace Proiect_RMI_CasaSchimbValutar
             tbMonedaDoritaValoare.Text = t.CursValutarCurent.Vector_CursValutar[1].ToString();
             tbCantitateaOferita.Text = t.ListaSchimbCantitate[0].ToString();
             tbCantitateaDorita.Text = t.ListaSchimbCantitate[1].ToString();
+            tbData.Text = data;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -85,6 +90,11 @@ namespace Proiect_RMI_CasaSchimbValutar
             doc.Save(denumire+".pdf");
             MessageBox.Show("Tranzactie salvata drept PDF");
             this.Close();
+        }
+
+        private void panelSalvare_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

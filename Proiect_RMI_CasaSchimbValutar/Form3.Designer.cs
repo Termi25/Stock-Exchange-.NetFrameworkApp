@@ -49,6 +49,8 @@
             this.btnSalvare = new System.Windows.Forms.Button();
             this.panelSalvare = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.tbData = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelSalvare.SuspendLayout();
@@ -277,7 +279,10 @@
             // 
             // panelSalvare
             // 
+            this.panelSalvare.BackColor = System.Drawing.Color.Transparent;
             this.panelSalvare.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
+            this.panelSalvare.Controls.Add(this.label8);
+            this.panelSalvare.Controls.Add(this.tbData);
             this.panelSalvare.Controls.Add(this.pictureBox1);
             this.panelSalvare.Controls.Add(this.label2);
             this.panelSalvare.Controls.Add(this.tbNumePrenume);
@@ -288,6 +293,7 @@
             this.panelSalvare.Name = "panelSalvare";
             this.panelSalvare.Size = new System.Drawing.Size(811, 381);
             this.panelSalvare.TabIndex = 13;
+            this.panelSalvare.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSalvare_Paint);
             // 
             // btnCancel
             // 
@@ -301,6 +307,28 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // tbData
+            // 
+            this.tbData.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tbData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbData.Font = new System.Drawing.Font("Nipera", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbData.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.tbData.Location = new System.Drawing.Point(433, 11);
+            this.tbData.Name = "tbData";
+            this.tbData.ReadOnly = true;
+            this.tbData.Size = new System.Drawing.Size(351, 23);
+            this.tbData.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.label8.Location = new System.Drawing.Point(430, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.TabIndex = 13;
             // 
             // Form3
             // 
@@ -348,5 +376,7 @@
         private System.Windows.Forms.Button btnSalvare;
         private System.Windows.Forms.Panel panelSalvare;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbData;
     }
 }

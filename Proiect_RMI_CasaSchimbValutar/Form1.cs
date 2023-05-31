@@ -111,10 +111,12 @@ namespace Proiect_RMI_CasaSchimbValutar
             {
                 if (i != pozMonedaDeRef)
                 {
-                    decalajY1 = (int)(15 + pnGraficCursValutar.Height * (cursValutarRef[i] / maxiValuta)*10);
+                    float valoare = cursValutarRef[i] / maxiValuta;
+                    decalajY1 = (int)(25 + pnGraficCursValutar.Height * valoare*10);
                     decalajY2 = pnGraficCursValutar.Height - decalajY1 - 65;
                     decalajX1 = decalajX1 + decalajX2*2+1;
                     Rectangle rec = new Rectangle(decalajX1, decalajY1, decalajX2, decalajY2);
+                    gr.DrawString(((int)(valoare*10000)).ToString(), font, Brushes.Black, new Point(decalajX1,decalajY1-10));
                     gr.FillRectangle(br, rec);
                     gr.DrawString(cv.Vector_NumeValuta[i].Denumire_scurta, font,Brushes.Black,new Point(decalajX1,pnGraficCursValutar.Height - 60));
                     pnGraficCursValutar.Invalidate();
@@ -387,7 +389,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             if (nr_elemente_Selectate == 1)
             {
                 int poz = ListaTranzactii.Count - 1 - lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
-                Form3 form3 = new Form3(ListaTranzactii[poz], cv);
+                string theDate = dateTimePicker1.Value.ToString("dd-MMM-yyyy");
+                Form3 form3 = new Form3(ListaTranzactii[poz], cv, theDate);
                 form3.Show();
                 lvTranzactii.CheckedItems[0].Checked = false;
             }
@@ -412,7 +415,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             if(nr_elemente_Selectate == 1)
             {
                 int poz = ListaTranzactii.Count-1-lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
-                Form3 form3 = new Form3(ListaTranzactii[poz],cv);
+                string theDate = dateTimePicker1.Value.ToString("dd-MMM-yyyy");
+                Form3 form3 = new Form3(ListaTranzactii[poz], cv, theDate);
                 form3.Show();
                 lvTranzactii.CheckedItems[0].Checked = false;
             }
@@ -431,7 +435,8 @@ namespace Proiect_RMI_CasaSchimbValutar
             if (nr_elemente_Selectate == 1)
             {
                 int poz = ListaTranzactii.Count - 1 - lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
-                Form3 form3 = new Form3(ListaTranzactii[poz], cv);
+                string theDate = dateTimePicker1.Value.ToString("dd-MMM-yyyy");
+                Form3 form3 = new Form3(ListaTranzactii[poz], cv,theDate);
                 form3.Show();
                 lvTranzactii.CheckedItems[0].Checked = false;
             }
