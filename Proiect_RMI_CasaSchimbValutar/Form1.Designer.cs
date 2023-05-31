@@ -63,7 +63,10 @@
             this.sAVEASBINARYFILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAVEASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripForm1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eXPORTPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hELPToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITAPPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lvTranzactii = new System.Windows.Forms.ListView();
             this.NumePrenume = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -72,17 +75,19 @@
             this.Cantitate1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cererea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cantitate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStriplvTranzactii = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.stergereTranzactieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnPrintare = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.eXPORTPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hELPToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXITAPPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaurareTranzactiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hELPToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStripForm1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.contextMenuStriplvTranzactii.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbNumePrenume
@@ -385,7 +390,7 @@
             this.tranzactiiTextToolStripMenuItem});
             this.loadToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // xMLCursValutarToolStripMenuItem
@@ -423,7 +428,7 @@
             this.sAVEASBINARYFILEToolStripMenuItem});
             this.sAVEToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sAVEToolStripMenuItem.Text = "SAVE";
             // 
             // quickSaveAsPDFToolStripMenuItem
@@ -449,7 +454,7 @@
             this.sAVEASToolStripMenuItem.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru_inchis;
             this.sAVEASToolStripMenuItem.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.sAVEASToolStripMenuItem.Name = "sAVEASToolStripMenuItem";
-            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.sAVEASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sAVEASToolStripMenuItem.Text = "SAVE AS";
             this.sAVEASToolStripMenuItem.Click += new System.EventHandler(this.sAVEASToolStripMenuItem_Click);
             // 
@@ -462,17 +467,38 @@
             this.hELPToolStripMenuItem.Text = "HELP";
             this.hELPToolStripMenuItem.Click += new System.EventHandler(this.hELPToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
+            // contextMenuStripForm1
             // 
-            this.contextMenuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.contextMenuStrip1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.galben;
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Nipera", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripForm1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.contextMenuStripForm1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.galben;
+            this.contextMenuStripForm1.Font = new System.Drawing.Font("Nipera", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStripForm1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eXPORTPDFToolStripMenuItem,
             this.hELPToolStripMenuItem1,
             this.eXITAPPToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStripForm1.Name = "contextMenuStrip1";
+            this.contextMenuStripForm1.Size = new System.Drawing.Size(154, 70);
+            // 
+            // eXPORTPDFToolStripMenuItem
+            // 
+            this.eXPORTPDFToolStripMenuItem.Name = "eXPORTPDFToolStripMenuItem";
+            this.eXPORTPDFToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.eXPORTPDFToolStripMenuItem.Text = "EXPORT PDF";
+            this.eXPORTPDFToolStripMenuItem.Click += new System.EventHandler(this.eXPORTPDFToolStripMenuItem_Click);
+            // 
+            // hELPToolStripMenuItem1
+            // 
+            this.hELPToolStripMenuItem1.Name = "hELPToolStripMenuItem1";
+            this.hELPToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.hELPToolStripMenuItem1.Text = "HELP";
+            this.hELPToolStripMenuItem1.Click += new System.EventHandler(this.hELPToolStripMenuItem1_Click);
+            // 
+            // eXITAPPToolStripMenuItem
+            // 
+            this.eXITAPPToolStripMenuItem.Name = "eXITAPPToolStripMenuItem";
+            this.eXITAPPToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.eXITAPPToolStripMenuItem.Text = "EXIT APP";
+            this.eXITAPPToolStripMenuItem.Click += new System.EventHandler(this.eXITAPPToolStripMenuItem_Click);
             // 
             // panel3
             // 
@@ -495,6 +521,7 @@
             this.Cantitate1,
             this.Cererea,
             this.Cantitate2});
+            this.lvTranzactii.ContextMenuStrip = this.contextMenuStriplvTranzactii;
             this.lvTranzactii.HideSelection = false;
             this.lvTranzactii.Location = new System.Drawing.Point(3, 3);
             this.lvTranzactii.Name = "lvTranzactii";
@@ -533,6 +560,24 @@
             // 
             this.Cantitate2.Text = "Cantitate";
             this.Cantitate2.Width = 86;
+            // 
+            // contextMenuStriplvTranzactii
+            // 
+            this.contextMenuStriplvTranzactii.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stergereTranzactieToolStripMenuItem,
+            this.restaurareTranzactiiToolStripMenuItem,
+            this.hELPToolStripMenuItem2});
+            this.contextMenuStriplvTranzactii.Name = "contextMenuStriplvTranzactii";
+            this.contextMenuStriplvTranzactii.Size = new System.Drawing.Size(294, 92);
+            // 
+            // stergereTranzactieToolStripMenuItem
+            // 
+            this.stergereTranzactieToolStripMenuItem.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.stergereTranzactieToolStripMenuItem.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stergereTranzactieToolStripMenuItem.Name = "stergereTranzactieToolStripMenuItem";
+            this.stergereTranzactieToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
+            this.stergereTranzactieToolStripMenuItem.Text = "Stergere tranzactie";
+            this.stergereTranzactieToolStripMenuItem.Click += new System.EventHandler(this.stergereTranzactieToolStripMenuItem_Click);
             // 
             // label10
             // 
@@ -580,26 +625,24 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // eXPORTPDFToolStripMenuItem
+            // restaurareTranzactiiToolStripMenuItem
             // 
-            this.eXPORTPDFToolStripMenuItem.Name = "eXPORTPDFToolStripMenuItem";
-            this.eXPORTPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eXPORTPDFToolStripMenuItem.Text = "EXPORT PDF";
-            this.eXPORTPDFToolStripMenuItem.Click += new System.EventHandler(this.eXPORTPDFToolStripMenuItem_Click);
+            this.restaurareTranzactiiToolStripMenuItem.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.restaurareTranzactiiToolStripMenuItem.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restaurareTranzactiiToolStripMenuItem.Name = "restaurareTranzactiiToolStripMenuItem";
+            this.restaurareTranzactiiToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
+            this.restaurareTranzactiiToolStripMenuItem.Text = "Restaurare Tranzactii";
+            this.restaurareTranzactiiToolStripMenuItem.Click += new System.EventHandler(this.restaurareTranzactiiToolStripMenuItem_Click);
             // 
-            // hELPToolStripMenuItem1
+            // hELPToolStripMenuItem2
             // 
-            this.hELPToolStripMenuItem1.Name = "hELPToolStripMenuItem1";
-            this.hELPToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.hELPToolStripMenuItem1.Text = "HELP";
-            this.hELPToolStripMenuItem1.Click += new System.EventHandler(this.hELPToolStripMenuItem1_Click);
-            // 
-            // eXITAPPToolStripMenuItem
-            // 
-            this.eXITAPPToolStripMenuItem.Name = "eXITAPPToolStripMenuItem";
-            this.eXITAPPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eXITAPPToolStripMenuItem.Text = "EXIT APP";
-            this.eXITAPPToolStripMenuItem.Click += new System.EventHandler(this.eXITAPPToolStripMenuItem_Click);
+            this.hELPToolStripMenuItem2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.hELPToolStripMenuItem2.Font = new System.Drawing.Font("Nipera", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hELPToolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.hELPToolStripMenuItem2.Name = "hELPToolStripMenuItem2";
+            this.hELPToolStripMenuItem2.Size = new System.Drawing.Size(293, 22);
+            this.hELPToolStripMenuItem2.Text = "HELP";
+            this.hELPToolStripMenuItem2.Click += new System.EventHandler(this.hELPToolStripMenuItem2_Click);
             // 
             // Form1
             // 
@@ -607,7 +650,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
             this.ClientSize = new System.Drawing.Size(1924, 908);
-            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.ContextMenuStrip = this.contextMenuStripForm1;
             this.Controls.Add(this.btnPrintare);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
@@ -643,8 +686,9 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStripForm1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.contextMenuStriplvTranzactii.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,7 +726,7 @@
         private System.Windows.Forms.ToolStripMenuItem quickSaveAsPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEASBINARYFILEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAVEASToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripForm1;
         private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem;
         private System.Windows.Forms.Button btnSchimbValutar;
         private System.Windows.Forms.Panel panel3;
@@ -703,6 +747,10 @@
         private System.Windows.Forms.ToolStripMenuItem eXPORTPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eXITAPPToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStriplvTranzactii;
+        private System.Windows.Forms.ToolStripMenuItem stergereTranzactieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restaurareTranzactiiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem2;
     }
 }
 

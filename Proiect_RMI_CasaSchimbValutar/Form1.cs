@@ -57,7 +57,7 @@ namespace Proiect_RMI_CasaSchimbValutar
 
         private void Form1_Close(object sender, EventArgs e)
         {
-            salvareBinara();
+            salvareBinara(0);
         }
 
         private void pnGraficCursValutar_Paint(object sender, PaintEventArgs e)
@@ -264,13 +264,16 @@ namespace Proiect_RMI_CasaSchimbValutar
             tbMonedaDoritaFinal.Text = string.Empty;
         }
 
-        private void salvareBinara()
+        private void salvareBinara(int optiune)
         {
             FileStream fs = new FileStream("fisierulTranzactii.dat", FileMode.OpenOrCreate, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(fs, ListaTranzactii);
             fs.Close();
-            MessageBox.Show("S-a salvat fisierul binar cu toate tranzactiile efectuate!");
+            if (optiune == 0)
+            {
+                MessageBox.Show("S-a salvat fisierul binar cu toate tranzactiile efectuate!");
+            }
         }
 
         private void restaurareBinara()
@@ -336,7 +339,7 @@ namespace Proiect_RMI_CasaSchimbValutar
 
         private void sAVEASBINARYFILEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salvareBinara();
+            salvareBinara(0);
         }
 
         private void tranzactieToolStripMenuItem_Click(object sender, EventArgs e)
@@ -454,8 +457,61 @@ namespace Proiect_RMI_CasaSchimbValutar
 
         private void eXITAPPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salvareBinara();
+            salvareBinara(0);
             this.Close();
+        }
+
+        private void stergereTranzactieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            System.Windows.Forms.ListView.CheckedListViewItemCollection checkedItems =
+            lvTranzactii.CheckedItems;
+
+            if(checkedItems.Count > 0)
+            {
+                salvareBinara(1);
+                for (int i = 0; i < checkedItems.Count; i++)
+                {
+                    int poz = ListaTranzactii.Count- lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[i]);
+                    if (ListaTranzactii.Count == 1)
+                    {
+                        ListaTranzactii.Clear();
+                    }
+                    else
+                    {
+                        ListaTranzactii.RemoveAt(poz - 1);
+                    }
+                }
+                foreach (ListViewItem itm in lvTranzactii.Items)
+                {
+                    itm.Remove();
+                }
+                for (int i = 0; i < ListaTranzactii.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(ListaTranzactii[i].Nume);
+                    item.SubItems.Add(ListaTranzactii[i].Adresa);
+                    item.SubItems.Add(ListaTranzactii[i].ToString().Split(',')[0]);
+                    item.SubItems.Add(ListaTranzactii[i].ListaSchimbCantitate[0].ToString());
+                    item.SubItems.Add(ListaTranzactii[i].ToString().Split(',')[1]);
+                    item.SubItems.Add(ListaTranzactii[i].ListaSchimbCantitate[1].ToString());
+                    lvTranzactii.Items.Add(item);
+                }
+            }
+            else
+            {
+                notificare("Selectati o tranzactie pentru stergere.");
+            }
+        }
+
+        private void restaurareTranzactiiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            restaurareBinara();
+        }
+
+        private void hELPToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }
