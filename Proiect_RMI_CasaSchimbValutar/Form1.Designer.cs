@@ -76,8 +76,12 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnPrintare = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.eXPORTPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hELPToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITAPPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -460,8 +464,15 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.contextMenuStrip1.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.galben;
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Nipera", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eXPORTPDFToolStripMenuItem,
+            this.hELPToolStripMenuItem1,
+            this.eXITAPPToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // panel3
             // 
@@ -569,12 +580,34 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // eXPORTPDFToolStripMenuItem
+            // 
+            this.eXPORTPDFToolStripMenuItem.Name = "eXPORTPDFToolStripMenuItem";
+            this.eXPORTPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eXPORTPDFToolStripMenuItem.Text = "EXPORT PDF";
+            this.eXPORTPDFToolStripMenuItem.Click += new System.EventHandler(this.eXPORTPDFToolStripMenuItem_Click);
+            // 
+            // hELPToolStripMenuItem1
+            // 
+            this.hELPToolStripMenuItem1.Name = "hELPToolStripMenuItem1";
+            this.hELPToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.hELPToolStripMenuItem1.Text = "HELP";
+            this.hELPToolStripMenuItem1.Click += new System.EventHandler(this.hELPToolStripMenuItem1_Click);
+            // 
+            // eXITAPPToolStripMenuItem
+            // 
+            this.eXITAPPToolStripMenuItem.Name = "eXITAPPToolStripMenuItem";
+            this.eXITAPPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eXITAPPToolStripMenuItem.Text = "EXIT APP";
+            this.eXITAPPToolStripMenuItem.Click += new System.EventHandler(this.eXITAPPToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proiect_RMI_CasaSchimbValutar.Properties.Resources.albastru;
             this.ClientSize = new System.Drawing.Size(1924, 908);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.btnPrintare);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
@@ -610,6 +643,7 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -666,6 +700,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnPrintare;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.ToolStripMenuItem eXPORTPDFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hELPToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem eXITAPPToolStripMenuItem;
     }
 }
 

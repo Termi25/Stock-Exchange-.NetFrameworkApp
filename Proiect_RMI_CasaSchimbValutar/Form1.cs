@@ -374,11 +374,27 @@ namespace Proiect_RMI_CasaSchimbValutar
 
         private void btnPrintare_Click_1(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = pd;
+            //printPreviewDialog1.Document = pd;
             //pd.PrintPage += new PrintPageEventHandler(this.pd_print());
             //PrintPreviewDialog dlg=new PrintPreviewDialog();
             //dlg.Document = pd;
             //dlg.ShowDialog();
+
+            System.Windows.Forms.ListView.CheckedListViewItemCollection checkedItems =
+            lvTranzactii.CheckedItems;
+
+            int nr_elemente_Selectate = checkedItems.Count;
+            if (nr_elemente_Selectate == 1)
+            {
+                int poz = ListaTranzactii.Count - 1 - lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
+                Form3 form3 = new Form3(ListaTranzactii[poz], cv);
+                form3.Show();
+                lvTranzactii.CheckedItems[0].Checked = false;
+            }
+            else
+            {
+                notificare("Trebuie selectata numai o tranzactie pentru printare drept PDF.");
+            }
         }
 
         private void hELPToolStripMenuItem_Click(object sender, EventArgs e)
@@ -398,11 +414,43 @@ namespace Proiect_RMI_CasaSchimbValutar
                 int poz = ListaTranzactii.Count-1-lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
                 Form3 form3 = new Form3(ListaTranzactii[poz],cv);
                 form3.Show();
+                lvTranzactii.CheckedItems[0].Checked = false;
             }
             else
             {
                 notificare("Trebuie selectata numai o tranzactie pentru printare drept PDF.");
             }
+        }
+
+        private void eXPORTPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ListView.CheckedListViewItemCollection checkedItems =
+            lvTranzactii.CheckedItems;
+
+            int nr_elemente_Selectate = checkedItems.Count;
+            if (nr_elemente_Selectate == 1)
+            {
+                int poz = ListaTranzactii.Count - 1 - lvTranzactii.Items.IndexOf(lvTranzactii.CheckedItems[0]);
+                Form3 form3 = new Form3(ListaTranzactii[poz], cv);
+                form3.Show();
+                lvTranzactii.CheckedItems[0].Checked = false;
+            }
+            else
+            {
+                notificare("Trebuie selectata numai o tranzactie pentru printare drept PDF.");
+            }
+        }
+
+        private void hELPToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void eXITAPPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            salvareBinara();
+            this.Close();
         }
     }
 }
